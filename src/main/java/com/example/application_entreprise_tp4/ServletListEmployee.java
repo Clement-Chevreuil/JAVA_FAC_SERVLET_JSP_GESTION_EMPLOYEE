@@ -1,5 +1,7 @@
 package com.example.application_entreprise_tp4;
 
+import com.example.application_entreprise_tp4.Class.Employee;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -16,8 +18,8 @@ public class ServletListEmployee extends HttpServlet {
 
         if(session.getAttribute("listEmployee") == null)
         {
-            List<ClassEmployee> listClassEmployee = new ArrayList<ClassEmployee>();
-            session.setAttribute("listEmployee", listClassEmployee);
+            List<Employee> listEmployee = new ArrayList<Employee>();
+            session.setAttribute("listEmployee", listEmployee);
         }
 
         request.getRequestDispatcher("listEmployee.jsp").forward(request, response);

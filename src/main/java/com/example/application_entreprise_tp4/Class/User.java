@@ -1,9 +1,9 @@
-package com.example.application_entreprise_tp4;
+package com.example.application_entreprise_tp4.Class;
 
-public class ClassUser {
+public class User {
 
     String name, password;
-    ClassEmployee emp;
+    Employee emp;
 
     public String getName() {
         return name;
@@ -21,13 +21,13 @@ public class ClassUser {
         this.password = password;
     }
 
-    public ClassUser(){}
+    public User(){}
 
-    public ClassEmployee getEmp() {
+    public Employee getEmp() {
         return emp;
     }
 
-    public void setEmp(ClassEmployee emp) {
+    public void setEmp(Employee emp) {
         this.emp = emp;
     }
 }

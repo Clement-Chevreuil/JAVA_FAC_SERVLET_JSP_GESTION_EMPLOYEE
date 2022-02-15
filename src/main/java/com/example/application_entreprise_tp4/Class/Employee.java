@@ -1,10 +1,10 @@
-package com.example.application_entreprise_tp4;
+package com.example.application_entreprise_tp4.Class;
 
-public class ClassEmployee {
+public class Employee {
 
     String firstName, lastName, role;
 
-    public ClassEmployee(){};
+    public Employee(){};
 
     public String getFirstName() {
         return firstName;

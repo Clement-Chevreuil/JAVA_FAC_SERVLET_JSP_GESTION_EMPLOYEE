@@ -1,5 +1,8 @@
 package com.example.application_entreprise_tp4;
 
+import com.example.application_entreprise_tp4.Class.Employee;
+import com.example.application_entreprise_tp4.Class.User;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -18,18 +21,18 @@ public class ServletLogin extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        ClassEmployee classEmployee = new ClassEmployee();
-        classEmployee.setFirstName("Jean");
-        classEmployee.setLastName("Dupont");
-        classEmployee.setRole("chef");
+        Employee employee = new Employee();
+        employee.setFirstName("Jean");
+        employee.setLastName("Dupont");
+        employee.setRole("chef");
 
-        ClassUser classUser = new ClassUser();
-        classUser.setEmp(classEmployee);
-        classUser.setName(username);
-        classUser.setPassword(password);
+        User user = new User();
+        user.setEmp(employee);
+        user.setName(username);
+        user.setPassword(password);
 
         HttpSession session = request.getSession(true);
-        session.setAttribute("user", classUser);
+        session.setAttribute("user", user);
         response.sendRedirect("welcome.jsp");
 
     }

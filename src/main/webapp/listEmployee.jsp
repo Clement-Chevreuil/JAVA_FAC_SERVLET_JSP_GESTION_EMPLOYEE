@@ -1,7 +1,7 @@
-<%@ page import="com.example.application_entreprise_tp4.ClassEmployee" %>
+<%@ page import="com.example.application_entreprise_tp4.Class.Employee" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
-  com.example.application_entreprise_tp4.ClassUser: Clement Chevreuil
+  com.example.application_entreprise_tp4.Class.User: Clement Chevreuil
   Date: 13/02/2022
   Time: 13:07
   To change this template use File | Settings | File Templates.
@@ -30,11 +30,11 @@
 
 
 
-            <c:forEach var="listClassEmployee" items="${sessionScope['listClassEmployee']}">
+            <c:forEach var="listEmployee" items="${sessionScope['listEmployee']}">
                 <tr>
-                    <td>${listClassEmployee.firstName}</td>
-                    <td>${listClassEmployee.lastName}</td>
-                    <td>${listClassEmployee.role}</td>
+                    <td>${listEmployee.firstName}</td>
+                    <td>${listEmployee.lastName}</td>
+                    <td>${listEmployee.role}</td>
                 </tr>
             </c:forEach>
         </tbody>
